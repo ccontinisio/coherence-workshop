@@ -31,7 +31,54 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: KayKit Animated Character|Jump
+      takeName: KayKit Animated Character|Jump
+      internalID: 1728088361261182183
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: KayKit Animated Character
+        weight: 0
+      - path: KayKit Animated Character/Body
+        weight: 0
+      - path: KayKit Animated Character/Body/armLeft
+        weight: 1
+      - path: KayKit Animated Character/Body/armLeft/handSlotLeft
+        weight: 1
+      - path: KayKit Animated Character/Body/armRight
+        weight: 1
+      - path: KayKit Animated Character/Body/armRight/handSlotRight
+        weight: 1
+      - path: KayKit Animated Character/Body/Head
+        weight: 1
+      - path: PrototypePete
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []

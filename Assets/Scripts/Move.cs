@@ -1,12 +1,11 @@
-using Coherence;
-using Coherence.Toolkit;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
     public Animator animator;
 
-    [field: Header("Inputs")] public Vector3 MoveInput { get; set; }
+    [field: Header("Inputs")]
+    public Vector3 MoveInput { get; set; }
     public bool IsSprinting { get; set; }
 
     [Header("Horizontal movement")]
@@ -36,7 +35,6 @@ public class Move : MonoBehaviour
     private bool _isGrounded;
     private float _currentSpeed;
     private Rigidbody _rigidbody;
-    private CoherenceSync _sync;
     private Vector3 _horizontalVelocity;
     private Vector3 _pushbackVelocity;
     private Vector3 _verticalVelocity;
@@ -50,7 +48,6 @@ public class Move : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _sync = GetComponent<CoherenceSync>();
     }
 
     private void Update()
