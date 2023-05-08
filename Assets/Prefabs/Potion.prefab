@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6568657244764055263}
+  - component: {fileID: 4557533752397081113}
+  - component: {fileID: 4056768446991916010}
   - component: {fileID: 1378731055433553133}
   - component: {fileID: 2916504400664464703}
-  - component: {fileID: 4056768446991916010}
-  - component: {fileID: 4557533752397081113}
   m_Layer: 3
   m_Name: Potion
   m_TagString: Untagged
@@ -35,6 +35,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4557533752397081113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106053088676492787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeceef71377244fbab2f8eb97acd9a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healingPower: 4
+--- !u!136 &4056768446991916010
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106053088676492787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2500731
+  m_Height: 0.86224085
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.43904498, z: 0.000000044703484}
 --- !u!33 &1378731055433553133
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -87,39 +123,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4056768446991916010
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106053088676492787}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2500731
-  m_Height: 0.86224085
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.43904498, z: 0.000000044703484}
---- !u!114 &4557533752397081113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106053088676492787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeceef71377244fbab2f8eb97acd9a4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healingPower: 4

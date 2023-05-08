@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -36,6 +35,7 @@ public class Attack : MonoBehaviour
         moveComponent.SetFrozen(true);
         
         // Animation Events (in the AnimationClip) will do the rest
+        // and invoke the Begin and End methods
     }
     
     public void Begin()
