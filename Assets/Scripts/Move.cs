@@ -52,14 +52,14 @@ public class Move : MonoBehaviour
 
     private void Update()
     {
-        if (IS_KINEMATIC) return; 
+        if (isFrozen) return; 
         
         UpdateJumping();
     }
 
     private void FixedUpdate()
     {
-        if (IS_KINEMATIC)
+        if (isFrozen)
         {
             UpdateAnimatorParameters();
             return; 
@@ -110,15 +110,14 @@ public class Move : MonoBehaviour
         UpdateAnimatorParameters();
     }
 
-    public bool IS_KINEMATIC => _rigidbody.isKinematic; 
-    public void SetKinematic(bool value)
+    public bool isFrozen => _rigidbody.isKinematic; 
+    public void SetFrozen(bool value)
     {
         _rigidbody.isKinematic = value;
         if (value)
         {
             InterruptJump();
-            _previousInputVector = Vector3.zero; 
-            _rigidbody.velocity = Vector3.zero; 
+            _previousInputVector = Vector3.zero;
             _horizontalVelocity = Vector3.zero; 
             _verticalVelocity = Vector3.zero; 
             _isGrounded = true; 
@@ -236,17 +235,6 @@ public class Move : MonoBehaviour
     {
         _isGrounded = false;
     }
-    
-    /// <summary>
-    /// Returns a value to be used as a force when throwing objects. It points in the direction of movement,
-    /// but only if moving forward. If moving backwards, it's zero.
-    /// </summary>
-    public float ThrowSpeed()
-    {
-        float throwSpeed = Vector3.Dot(transform.forward, _horizontalVelocity) * .8f;
-        throwSpeed = Mathf.Clamp(throwSpeed, 0f, Mathf.Infinity);
-        return throwSpeed;
-    }
 
     /// <summary>
     /// Applies a pushback force to the player, coming from a throw or from a hit.
@@ -256,11 +244,5 @@ public class Move : MonoBehaviour
     public void ApplyThrowPushback(float throwSpeed)
     {
         _pushbackVelocity += -transform.forward * throwSpeed * .7f;
-    }
-
-    public void ApplyMovement(Vector3 dir)
-    {
-        // _rigidbody.velocity += dir; 
-        
     }
 }
