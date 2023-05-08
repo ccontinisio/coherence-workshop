@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SkullBrightEyes
+  m_Name: Fireball
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -117,9 +117,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5879774, g: 0, b: 1, a: 1}
-    - _Color: {r: 0.5879774, g: 0, b: 1, a: 1}
-    - _EmissionColor: {r: 17.885607, g: 0, b: 41.660378, a: 1}
+    - _BaseColor: {r: 1, g: 0.3420852, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.34208518, b: 0, a: 1}
+    - _EmissionColor: {r: 20.83019, g: 0.38808426, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4577618022005702456

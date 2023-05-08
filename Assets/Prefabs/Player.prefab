@@ -1011,7 +1011,7 @@ MonoBehaviour:
   jumpCutOff: 0.5
   coyoteTime: 0.125
   maxFallSpeed: 20
-  cruiseHeight: 1
+  cruiseHeight: 0.99
   raycastLength: 1.5
   springStrength: 40
   dampenFactor: 0.05
