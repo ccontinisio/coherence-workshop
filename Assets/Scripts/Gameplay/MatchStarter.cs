@@ -28,23 +28,27 @@ public class MatchStarter : MonoBehaviour
         if (_sync.HasStateAuthority)
         {
             _connectedPlayers = _sync.MonoBridge.ClientConnections.ClientConnectionCount;
-            CheckPlayerNumber();
+            CheckPlayersNumber();
         }
     }
 
     private void OnPlayerJoined(CoherenceClientConnection obj)
     {
         _connectedPlayers++;
-        CheckPlayerNumber();
+        CheckPlayersNumber();
     }
     
     private void OnPlayerDisconnected(CoherenceClientConnection obj)
     {
         _connectedPlayers--;
-        CheckPlayerNumber();
+        CheckPlayersNumber();
     }
 
-    private void CheckPlayerNumber()
+    /// <summary>
+    /// Checks if the right number of players has been reached.
+    /// If so, kicks off the first wave.
+    /// </summary>
+    private void CheckPlayersNumber()
     {
         if (_matchHasStarted) return;
 
