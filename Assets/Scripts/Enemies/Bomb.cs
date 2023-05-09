@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +6,7 @@ public class Bomb : MonoBehaviour
 {
     public int timeToExplosion = 5;
     public Renderer redShell;
+    public GameObject explosionPrefab;
 
     public event UnityAction Exploded;
 
@@ -40,9 +40,10 @@ public class Bomb : MonoBehaviour
 
     private void Explode()
     {
-        //TODO: Show explosion
-        transform.SetParent(null, true);
+        //transform.SetParent(null, true);
         Exploded?.Invoke();
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void OnDisable()

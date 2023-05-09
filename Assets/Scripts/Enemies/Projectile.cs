@@ -12,6 +12,10 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         GetComponent<Rigidbody>().velocity = transform.forward * speed;
+    }
+
+    private void OnEnable()
+    {
         StartCoroutine(Remove());
     }
 
@@ -23,11 +27,11 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<IHealth>().ChangeHealth(damage);
+        other.GetComponent<IHealth>().ChangeHealth(-damage);
         Destroy(gameObject);
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         StopCoroutine(Remove());
     }
