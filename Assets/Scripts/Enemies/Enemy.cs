@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IHealth
 {
     public int health = 1;
     public float speed = 1f;
+    public ParticleSystem damageSparks;
 
     public event UnityAction<IHealth> Dead;
     
@@ -60,6 +61,7 @@ public class Enemy : MonoBehaviour, IHealth
     /// <param name="healthChange"></param>
     public void ChangeHealth(int healthChange)
     {
+        damageSparks.Play();
         health += healthChange;
         
         if (health <= 0)

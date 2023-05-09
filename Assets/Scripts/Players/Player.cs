@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IHealth
     public int damage = 2;
     public TriggerDetection weaponTrigger;
     public CinemachineImpulseSource cinemachineImpulseSource;
+    public ParticleSystem damageSparks;
     
     public event UnityAction<IHealth> Dead;
     
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour, IHealth
 
     public void ChangeHealth(int healthChange)
     {
+        damageSparks.Play();
         health += healthChange;
         health = Mathf.Clamp(health, 0, _maxHealth);
 
