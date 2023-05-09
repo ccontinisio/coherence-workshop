@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,7 +7,6 @@ public class FierySkull : Enemy
     public GameObject fireballPrefab;
     
     private Rigidbody _rigidbody;
-    private float _lookForPlayerInterval = 1.0f;
 
     private void Awake()
     {
@@ -23,13 +21,13 @@ public class FierySkull : Enemy
     private void OnEnable()
     {
         StartCoroutine(ShootFireball());
-        StartCoroutine(LookForPlayer());
+        StartCoroutine(KeepLookingForPlayer());
     }
 
     private void OnDisable()
     {
         StopCoroutine(ShootFireball());
-        StopCoroutine(LookForPlayer());
+        StopCoroutine(KeepLookingForPlayer());
     }
 
     private IEnumerator ShootFireball()
@@ -38,15 +36,6 @@ public class FierySkull : Enemy
         {
             yield return new WaitForSeconds(fireballInterval);
             Instantiate(fireballPrefab, transform.position + transform.forward, transform.rotation);
-        }
-    }
-    
-    private IEnumerator LookForPlayer()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(_lookForPlayerInterval);
-            FindClosestPlayer();
         }
     }
 

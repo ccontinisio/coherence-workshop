@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -9,7 +10,25 @@ public class Enemy : MonoBehaviour, IHealth
     public float speed = 1f;
     
     protected Transform _playerTransform;
+    protected float _lookForPlayerInterval = 1.0f;
     
+    /// <summary>
+    /// Continuously looks for the closest player by calling <see cref="FindClosestPlayer"/>,
+    /// until manually stopped with StopCoroutine.
+    /// </summary>
+    /// <returns></returns>
+    protected IEnumerator KeepLookingForPlayer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(_lookForPlayerInterval);
+            FindClosestPlayer();
+        }
+    }
+    
+    /// <summary>
+    /// Gets all the existing player characters, and finds the one that is closest.
+    /// </summary>
     protected void FindClosestPlayer()
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -31,6 +50,11 @@ public class Enemy : MonoBehaviour, IHealth
             _playerTransform = null;
     }
     
+    /// <summary>
+    /// Adds or subtracts a quantity of health from the existing health.
+    /// If health goes to zero, invokes <see cref="Die"/>.
+    /// </summary>
+    /// <param name="healthChange"></param>
     public void ChangeHealth(int healthChange)
     {
         health += healthChange;
@@ -41,9 +65,12 @@ public class Enemy : MonoBehaviour, IHealth
         }
     }
 
-    private void Die()
+    /// <summary>
+    /// Destroys the object when health reached zero.
+    /// Override to implement unique custom behaviour.
+    /// </summary>
+    protected virtual void Die()
     {
-        //TODO
         Destroy(gameObject);
     }
 }

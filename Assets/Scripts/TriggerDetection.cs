@@ -5,8 +5,8 @@ public class TriggerDetection : MonoBehaviour
 {
     public string tagToCheckFor = "Player";
     
-    public UnityAction<GameObject> TriggerEntered;
-    public UnityAction<GameObject> TriggerExited;
+    public event UnityAction<GameObject> TriggerEntered;
+    public event UnityAction<GameObject> TriggerExited;
     
     private void OnTriggerEnter(Collider other)
     {

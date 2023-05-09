@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAnimationEvents : MonoBehaviour
+public class HumanoidAnimationEvents : MonoBehaviour
 {
     public Attack attackScript;
     

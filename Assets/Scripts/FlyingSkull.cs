@@ -22,11 +22,13 @@ public class FlyingSkull : Enemy
     private void OnEnable()
     {
         damageTrigger.TriggerEntered += DealDamage;
+        StartCoroutine(KeepLookingForPlayer());
     }
 
     private void OnDisable()
     {
         damageTrigger.TriggerEntered -= DealDamage;
+        StopCoroutine(KeepLookingForPlayer());
     }
 
     private void DealDamage(GameObject player)

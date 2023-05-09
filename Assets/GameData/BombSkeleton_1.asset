@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7ed2b31b0fb4ddfb7dc428e0401b58, type: 3}
+  m_Name: BombSkeleton_1
+  m_EditorClassIdentifier: 
+  subwaves:
+  - quantity: 1
+    prefab: {fileID: 3650729055794738687, guid: 48ce01999d2cf4c2aa55779029cb601b,
+      type: 3}
