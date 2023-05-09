@@ -6,8 +6,6 @@ public class FlyingSkull : Enemy
     public TriggerDetection damageTrigger;
     
     private Rigidbody _rigidbody;
-    private float _interval = 1.0f;
-    private float _timer;
 
     private void Awake()
     {
@@ -25,12 +23,6 @@ public class FlyingSkull : Enemy
         StartCoroutine(KeepLookingForPlayer());
     }
 
-    private void OnDisable()
-    {
-        damageTrigger.TriggerEntered -= DealDamage;
-        StopCoroutine(KeepLookingForPlayer());
-    }
-
     private void DealDamage(GameObject player)
     {
         player.GetComponent<IHealth>().ChangeHealth(-damage);
@@ -43,5 +35,11 @@ public class FlyingSkull : Enemy
         Vector3 directionToPlayer = (_playerTransform.position + Vector3.up - transform.position).normalized;
         _rigidbody.velocity = directionToPlayer * speed;
         _rigidbody.rotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+    }
+
+    private void OnDisable()
+    {
+        damageTrigger.TriggerEntered -= DealDamage;
+        StopCoroutine(KeepLookingForPlayer());
     }
 }

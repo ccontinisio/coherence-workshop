@@ -203,6 +203,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.veriorpies.parrelsync": {
+      "version": "file:ParrelSync",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "io.coherence.sdk": {
       "version": "0.10.10",
       "depth": 0,
