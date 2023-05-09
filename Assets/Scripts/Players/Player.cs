@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour, IHealth
 {
@@ -7,6 +8,8 @@ public class Player : MonoBehaviour, IHealth
     public int damage = 2;
     public TriggerDetection weaponTrigger;
     public CinemachineImpulseSource cinemachineImpulseSource;
+    
+    public event UnityAction<IHealth> Dead;
     
     private int _maxHealth;
 
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour, IHealth
 
     private void Die()
     {
-        //TODO
+        Dead?.Invoke(this);
         Destroy(gameObject);
     }
 }

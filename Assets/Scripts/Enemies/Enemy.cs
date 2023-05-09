@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Common functionality to all enemies
@@ -8,6 +9,8 @@ public class Enemy : MonoBehaviour, IHealth
 {
     public int health = 1;
     public float speed = 1f;
+
+    public event UnityAction<IHealth> Dead;
     
     protected Transform _playerTransform;
     protected float _lookForPlayerInterval = 1.0f;
@@ -49,7 +52,7 @@ public class Enemy : MonoBehaviour, IHealth
         else
             _playerTransform = null;
     }
-    
+
     /// <summary>
     /// Adds or subtracts a quantity of health from the existing health.
     /// If health goes to zero, invokes <see cref="Die"/>.
@@ -71,6 +74,7 @@ public class Enemy : MonoBehaviour, IHealth
     /// </summary>
     protected virtual void Die()
     {
+        Dead?.Invoke(this);
         Destroy(gameObject);
     }
 }

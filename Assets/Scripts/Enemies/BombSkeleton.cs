@@ -45,6 +45,8 @@ public class BombSkeleton : Enemy
     private IEnumerator Remove()
     {
         yield return new WaitForSeconds(2f);
+        
+        Die();
     }
 
     private void OnDisable()
