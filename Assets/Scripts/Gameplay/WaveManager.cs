@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Spawns enemies in waves. When an enemy dies (and invokes the <see cref="IHealth.Dead"/> event,
@@ -10,6 +11,8 @@ public class WaveManager : MonoBehaviour
     public int waveInterval = 2;
     public WaveSO[] waves;
     public Transform[] spawnPoints;
+    
+    public event UnityAction<int> PointsScored;
 
     private int _currentWave = -1;
     private int _currentSpawnPoint;
@@ -44,6 +47,7 @@ public class WaveManager : MonoBehaviour
     private void OnEnemyDead(IHealth enemy)
     {
         _remainingEnemies--;
+        PointsScored?.Invoke(1); //The ScoreUI will be watching this
         enemy.Dead -= OnEnemyDead;
         
         if (_remainingEnemies == 0)
