@@ -34,7 +34,6 @@ Transform:
   - {fileID: 8148793618048471230}
   - {fileID: 5068231838973435134}
   - {fileID: 948952580687658478}
-  - {fileID: 5724501894425849713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -160.947, z: 0}
@@ -52,7 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   speed: 2
-  damageSparks: {fileID: 5319984770781552722}
+  damageSparksPrefab: {fileID: 4782715882759507180, guid: 1c63a818042c748d5a79de927eb496e5,
+    type: 3}
   damage: 1
   damageTrigger: {fileID: 3911053213180295861}
 --- !u!54 &5486559877801126721
@@ -5259,94 +5259,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &5589803631255549363
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 954861958425012453}
-    m_Modifications:
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4782715882759507180, guid: 1c63a818042c748d5a79de927eb496e5,
-        type: 3}
-      propertyPath: m_Name
-      value: DamageSparks
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c63a818042c748d5a79de927eb496e5, type: 3}
---- !u!199 &3170492149716864486 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 7380591677039523925, guid: 1c63a818042c748d5a79de927eb496e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5589803631255549363}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &5319984770781552722 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 308102121285277153, guid: 1c63a818042c748d5a79de927eb496e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5589803631255549363}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5724501894425849713 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 208147369171180226, guid: 1c63a818042c748d5a79de927eb496e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5589803631255549363}
-  m_PrefabAsset: {fileID: 0}

@@ -1,3 +1,15 @@
 fileFormatVersion: 2
 guid: e944efe57eac4162851bb60398c5452e
-timeCreated: 1683587713
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - damageSparksPrefab: {fileID: 4782715882759507180, guid: 1c63a818042c748d5a79de927eb496e5,
+      type: 3}
+  - fireballPrefab: {fileID: 1666062855874985145, guid: 677cc6adb825e4f698f676c7c8341d73,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
