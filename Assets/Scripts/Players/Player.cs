@@ -34,8 +34,13 @@ public class Player : MonoBehaviour, IHealth
     {
         health += healthChange;
         health = Mathf.Clamp(health, 0, _maxHealth);
-        Vector2 randomImpulse = Random.insideUnitCircle.normalized * Random.Range(.2f, .4f);
-        cinemachineImpulseSource.GenerateImpulseWithVelocity(new Vector3(randomImpulse.x, 0f, randomImpulse.y));
+
+        if (healthChange < 0)
+        {
+            // Screen shake
+            Vector2 randomImpulse = Random.insideUnitCircle.normalized * Random.Range(.2f, .4f);
+            cinemachineImpulseSource.GenerateImpulseWithVelocity(new Vector3(randomImpulse.x, 0f, randomImpulse.y));
+        }
         
         if (health == 0)
         {

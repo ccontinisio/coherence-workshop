@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    public Wave[] waves;
+    public WaveSO[] waves;
     public Transform[] spawnPoints;
 
     private int _currentWave = -1;
