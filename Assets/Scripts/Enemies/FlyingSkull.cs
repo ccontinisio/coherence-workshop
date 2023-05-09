@@ -36,16 +36,6 @@ public class FlyingSkull : Enemy
         player.GetComponent<IHealth>().ChangeHealth(-damage);
     }
 
-    private void Update()
-    {
-        _timer += Time.deltaTime;
-        if (_timer >= _interval)
-        {
-            FindClosestPlayer();
-            _timer = 0.0f;
-        }
-    }
-
     private void FixedUpdate()
     {
         if (_playerTransform == null) return;

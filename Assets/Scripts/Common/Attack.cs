@@ -52,7 +52,7 @@ public class Attack : MonoBehaviour
     
     private void OnDisable()
     {
-        attackAction.action.Disable();
+        //attackAction.action.Disable();
         attackAction.action.performed -= OnAttackPerformed;
     }
 }
