@@ -20,7 +20,7 @@ public class WaveManager : MonoBehaviour
 
     public void Start()
     {
-        BeginWave();
+        //BeginWave();
     }
 
     public void BeginWave()
