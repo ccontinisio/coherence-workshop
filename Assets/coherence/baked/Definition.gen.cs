@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "212f3e9b52328d6088e73b936428c29c52d0f7b0";
+		public const string schemaId = "8b3cb0a37f973eee5af49a30f864b39078f86e0a";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -119,7 +119,6 @@ namespace Coherence.Generated
 		public const uint InternalGenericFieldULong3 = 99;
 		public const uint InternalGenericFieldColor0 = 100;
 		public const uint InternalGenericFieldColor1 = 101;
-		public const uint InternalArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0 = 102;
 		public const uint InternalAuthorityRequest = 0;
 		public const uint InternalAuthorityTransfer = 1;
 		public const uint InternalQuerySynced = 2;
@@ -230,7 +229,6 @@ namespace Coherence.Generated
 			{ 99, "GenericFieldULong3" },
 			{ 100, "GenericFieldColor0" },
 			{ 101, "GenericFieldColor1" },
-			{ 102, "ArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0" },
 		};
 
 		public static string ComponentNameForTypeId(uint typeId)
@@ -456,8 +454,6 @@ namespace Coherence.Generated
 					return GenericFieldColor0.Deserialize(inProtocolStream);
 				case InternalGenericFieldColor1:
 					return GenericFieldColor1.Deserialize(inProtocolStream);
-				case InternalArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0(inProtocolStream);
 				default:
 					return (null, 0, 0);
 			}
